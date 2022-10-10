@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+  <classpathentry kind="src" path="target/maven-shared-archive-resources" excluding="**/*.java"/>
+  <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="var" path="M2_REPO/javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.jar" sourcepath="M2_REPO/javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0-sources.jar"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+  <classpathentry kind="src" path="/nifi-db2_processor-processors"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/nifi/nifi-utils/1.17.0/nifi-utils-1.17.0.jar" sourcepath="M2_REPO/org/apache/nifi/nifi-utils/1.17.0/nifi-utils-1.17.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/nifi/nifi-api/1.17.0/nifi-api-1.17.0.jar" sourcepath="M2_REPO/org/apache/nifi/nifi-api/1.17.0/nifi-api-1.17.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jooq/jooq/3.12.4/jooq-3.12.4.jar" sourcepath="M2_REPO/org/jooq/jooq/3.12.4/jooq-3.12.4-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2.jar" sourcepath="M2_REPO/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/ibm/db2/jcc/11.5.7.0/jcc-11.5.7.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar" sourcepath="M2_REPO/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar" sourcepath="M2_REPO/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar" sourcepath="M2_REPO/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar" sourcepath="M2_REPO/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar" sourcepath="M2_REPO/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar" sourcepath="M2_REPO/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/junit/vintage/junit-vintage-engine/5.8.2/junit-vintage-engine-5.8.2.jar" sourcepath="M2_REPO/org/junit/vintage/junit-vintage-engine/5.8.2/junit-vintage-engine-5.8.2-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/junit/junit/4.13.2/junit-4.13.2.jar" sourcepath="M2_REPO/junit/junit/4.13.2/junit-4.13.2-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar" sourcepath="M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/junit/jupiter/junit-jupiter-params/5.8.2/junit-jupiter-params-5.8.2.jar" sourcepath="M2_REPO/org/junit/jupiter/junit-jupiter-params/5.8.2/junit-jupiter-params-5.8.2-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/mockito/mockito-core/3.11.2/mockito-core-3.11.2.jar" sourcepath="M2_REPO/org/mockito/mockito-core/3.11.2/mockito-core-3.11.2-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/net/bytebuddy/byte-buddy/1.11.3/byte-buddy-1.11.3.jar" sourcepath="M2_REPO/net/bytebuddy/byte-buddy/1.11.3/byte-buddy-1.11.3-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/net/bytebuddy/byte-buddy-agent/1.11.3/byte-buddy-agent-1.11.3.jar" sourcepath="M2_REPO/net/bytebuddy/byte-buddy-agent/1.11.3/byte-buddy-agent-1.11.3-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/objenesis/objenesis/3.2/objenesis-3.2.jar" sourcepath="M2_REPO/org/objenesis/objenesis/3.2/objenesis-3.2-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/mockito/mockito-junit-jupiter/3.11.2/mockito-junit-jupiter-3.11.2.jar" sourcepath="M2_REPO/org/mockito/mockito-junit-jupiter/3.11.2/mockito-junit-jupiter-3.11.2-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36.jar" sourcepath="M2_REPO/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar" sourcepath="M2_REPO/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/codehaus/groovy/groovy-test/3.0.9/groovy-test-3.0.9.jar" sourcepath="M2_REPO/org/codehaus/groovy/groovy-test/3.0.9/groovy-test-3.0.9-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/codehaus/groovy/groovy/3.0.9/groovy-3.0.9.jar" sourcepath="M2_REPO/org/codehaus/groovy/groovy/3.0.9/groovy-3.0.9-sources.jar"/>
+</classpath>

@@ -1,0 +1,29 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+nifi-db2_processor-nar
+
+
+From: 'an unknown organization'
+  - IBM Data Server Driver for JDBC and SQLJ  com.ibm.db2:jcc:jar:11.5.7.0
+    License: International Program License Agreement (IPLA)  (https://www-40.ibm.com/software/sla/sladb.nsf/lilookup/1024954E51C94B03002587A4003CB520?OpenDocument)
+  - jOOQ (http://www.jooq.org/jooq) org.jooq:jooq:jar:3.12.4
+    License: Apache License, Version 2.0  (http://www.jooq.org/inc/LICENSE.txt)
+  - reactive-streams (http://www.reactive-streams.org/) org.reactivestreams:reactive-streams:jar:1.0.2
+    License: CC0  (http://creativecommons.org/publicdomain/zero/1.0/)
+
+From: 'Apache NiFi Project' (https://nifi.apache.org/)
+  - nifi-db2_processor-processors (https://nifi.apache.org/nifi-nar-bundles/db2_processor/nifi-db2_processor-processors) ibs:nifi-db2_processor-processors:jar:1.0.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-utils (https://nifi.apache.org/nifi-commons/nifi-utils) org.apache.nifi:nifi-utils:jar:1.17.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+From: 'Oracle Corporation' (http://www.oracle.com/)
+  - jaxb-api (https://github.com/javaee/jaxb-spec/jaxb-api) javax.xml.bind:jaxb-api:jar:2.3.0
+    License: CDDL 1.1  (https://oss.oracle.com/licenses/CDDL+GPL-1.1)    License: GPL2 w/ CPE  (https://oss.oracle.com/licenses/CDDL+GPL-1.1)
+
+
+
+
