@@ -1,4 +1,3 @@
-ibs\processors\db2_processor\DBHandler.class
+ibs\processors\db2_processor\DB2CallProcessor.class
 ibs\processors\db2_processor\StatementHandler.class
-ibs\processors\db2_processor\DB2CallProcessor$1.class
 ibs\processors\db2_processor\ResultHandler.class

@@ -5,17 +5,24 @@ import org.apache.nifi.flowfile.FlowFile;
 import org.apache.nifi.logging.ComponentLog;
 import org.apache.nifi.processor.*;
 import org.apache.nifi.processor.exception.ProcessException;
-import org.apache.nifi.processor.io.OutputStreamCallback;
 import org.apache.nifi.processor.util.StandardValidators;
+import org.apache.nifi.dbcp.DBCPService;
 import org.jooq.tools.json.JSONArray;
 
-import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.*;
 
+
 public class DB2CallProcessor extends AbstractProcessor {
+
+	public static final PropertyDescriptor DB2_SERVICE = new PropertyDescriptor.Builder()
+			.name("DB2_SERVICE")
+			.displayName("service")
+			.description("service")
+			.required(true)
+			.identifiesControllerService(DBCPService.class)
+			.build();
 
 	public static final PropertyDescriptor SQL_STRING = new PropertyDescriptor.Builder()
 			.name("SQL_STRING")
@@ -24,34 +31,6 @@ public class DB2CallProcessor extends AbstractProcessor {
 			.required(true)
 			.defaultValue("")
 			.addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
-			.build();
-
-	public static final PropertyDescriptor URL = new PropertyDescriptor.Builder()
-			.name("URL")
-			.displayName("DB2 URL string")
-			.description("DB2 URL string")
-			.required(true)
-			.addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
-			.defaultValue("")
-			.build();
-
-	public static final PropertyDescriptor USERNAME = new PropertyDescriptor.Builder()
-			.name("USERNAME")
-			.displayName("DB2 username")
-			.description("DB2 username")
-			.required(true)
-			.addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
-			.defaultValue("")
-			.build();
-
-	public static final PropertyDescriptor PASSWORD = new PropertyDescriptor.Builder()
-			.name("PASSWORD")
-			.displayName("DB2 password")
-			.description("DB2 password")
-			.required(true)
-			.addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
-			.defaultValue("")
-			.sensitive(true)
 			.build();
 
 	public static final PropertyDescriptor ROWS_NUMBER = new PropertyDescriptor.Builder()
@@ -78,16 +57,16 @@ public class DB2CallProcessor extends AbstractProcessor {
 
 	private int status_code = -1;
 
+	protected DBCPService dbcpService;
+
 	@Override
 	protected void init(ProcessorInitializationContext context) {
 		super.init(context);
 
 		final ArrayList<PropertyDescriptor> descriptors = new ArrayList<PropertyDescriptor>();
 		descriptors.add(SQL_STRING);
-		descriptors.add(URL);
-		descriptors.add(USERNAME);
-		descriptors.add(PASSWORD);
 		descriptors.add(ROWS_NUMBER);
+		descriptors.add(DB2_SERVICE);
 
 		this.descriptors = Collections.unmodifiableList(descriptors);
 
@@ -108,6 +87,7 @@ public class DB2CallProcessor extends AbstractProcessor {
 	protected List<PropertyDescriptor> getSupportedPropertyDescriptors() {
 		return descriptors;
 	}
+
 	@Override
 	public void onTrigger(ProcessContext context, ProcessSession session) throws ProcessException {
 
@@ -115,43 +95,37 @@ public class DB2CallProcessor extends AbstractProcessor {
 
 		FlowFile flowfile = session.create();
 
-		flowfile = session.write(flowfile, new OutputStreamCallback() {
+		flowfile = session.write(flowfile, out -> {
+			try {
+				dbcpService = context.getProperty(DB2_SERVICE).asControllerService(DBCPService.class);
+				final Connection connection = dbcpService.getConnection();
 
-			@Override
-			public void process(OutputStream out) {
-				try {
-					Connection connection = DBHandler.CreateConnection(
-							context.getProperty(URL).getValue(),
-							context.getProperty(USERNAME).getValue(),
-							context.getProperty(PASSWORD).getValue()
-					);
+				StatementHandler stmt_handler = new StatementHandler(
+						connection,
+						context,
+						context.getProperty(SQL_STRING).getValue(),
+						Integer.parseInt(context.getProperty(ROWS_NUMBER).getValue()),
+						logger
+				);
 
-					StatementHandler stmt_handler = new StatementHandler(
-							connection,
-							context,
-							context.getProperty(SQL_STRING).getValue(),
-							Integer.parseInt(context.getProperty(ROWS_NUMBER).getValue()),
-							logger
-					);
+				status_code = stmt_handler.getStatus_code();
+				JSONArray res_json = stmt_handler.getJson();
 
-					status_code = stmt_handler.getStatus_code();
-					JSONArray res_json = stmt_handler.getJson();
-
-					if (res_json != null){
-						out.write(res_json.toString().getBytes(StandardCharsets.UTF_8));
-					}
-					else {
-						logger.debug("No results");
-					}
-					stmt_handler.close();
-
-				} catch (Exception e) {
-					status_code = -1;
-					logger.warn(e.getMessage());
-					logger.warn(Arrays.toString(e.getStackTrace()));
+				if (res_json != null){
+					out.write(res_json.toString().getBytes(StandardCharsets.UTF_8));
 				}
+				else {
+					logger.debug("No results");
+				}
+				stmt_handler.close();
+
+			} catch (Exception e) {
+				status_code = -1;
+				logger.warn(e.getMessage());
+				logger.debug(Arrays.toString(e.getStackTrace()));
 			}
-		});
+		}
+		);
 
 		switch (status_code){
 			case  (-1):

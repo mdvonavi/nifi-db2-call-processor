@@ -56,7 +56,7 @@ public class StatementHandler {
         }
         catch (Exception e){
             logger.warn(e.getMessage());
-            logger.warn(Arrays.toString(e.getStackTrace()));
+            logger.debug(Arrays.toString(e.getStackTrace()));
             this.status_code = -1;
         }
     }

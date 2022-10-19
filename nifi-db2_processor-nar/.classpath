@@ -10,6 +10,52 @@
   <classpathentry kind="var" path="M2_REPO/org/jooq/jooq/3.12.4/jooq-3.12.4.jar" sourcepath="M2_REPO/org/jooq/jooq/3.12.4/jooq-3.12.4-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2.jar" sourcepath="M2_REPO/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/ibm/db2/jcc/11.5.7.0/jcc-11.5.7.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/nifi/nifi-dbcp-service/1.17.0/nifi-dbcp-service-1.17.0.jar" sourcepath="M2_REPO/org/apache/nifi/nifi-dbcp-service/1.17.0/nifi-dbcp-service-1.17.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/nifi/nifi-service-utils/1.17.0/nifi-service-utils-1.17.0.jar" sourcepath="M2_REPO/org/apache/nifi/nifi-service-utils/1.17.0/nifi-service-utils-1.17.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/nifi/nifi-security-kerberos/1.17.0/nifi-security-kerberos-1.17.0.jar" sourcepath="M2_REPO/org/apache/nifi/nifi-security-kerberos/1.17.0/nifi-security-kerberos-1.17.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/nifi/nifi-security-kerberos-api/1.17.0/nifi-security-kerberos-api-1.17.0.jar" sourcepath="M2_REPO/org/apache/nifi/nifi-security-kerberos-api/1.17.0/nifi-security-kerberos-api-1.17.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar" sourcepath="M2_REPO/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-dbcp2/2.9.0/commons-dbcp2-2.9.0.jar" sourcepath="M2_REPO/org/apache/commons/commons-dbcp2/2.9.0/commons-dbcp2-2.9.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-pool2/2.10.0/commons-pool2-2.10.0.jar" sourcepath="M2_REPO/org/apache/commons/commons-pool2/2.10.0/commons-pool2-2.10.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/nifi/nifi-dbcp-service-api/1.17.0/nifi-dbcp-service-api-1.17.0.jar" sourcepath="M2_REPO/org/apache/nifi/nifi-dbcp-service-api/1.17.0/nifi-dbcp-service-api-1.17.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/nifi/nifi-database-utils/1.17.0/nifi-database-utils-1.17.0.jar" sourcepath="M2_REPO/org/apache/nifi/nifi-database-utils/1.17.0/nifi-database-utils-1.17.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/nifi/nifi-standard-record-utils/1.17.0/nifi-standard-record-utils-1.17.0.jar" sourcepath="M2_REPO/org/apache/nifi/nifi-standard-record-utils/1.17.0/nifi-standard-record-utils-1.17.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/nifi/nifi-security-socket-ssl/1.17.0/nifi-security-socket-ssl-1.17.0.jar" sourcepath="M2_REPO/org/apache/nifi/nifi-security-socket-ssl/1.17.0/nifi-security-socket-ssl-1.17.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-csv/1.8/commons-csv-1.8.jar" sourcepath="M2_REPO/org/apache/commons/commons-csv/1.8/commons-csv-1.8-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-text/1.8/commons-text-1.8.jar" sourcepath="M2_REPO/org/apache/commons/commons-text/1.8/commons-text-1.8-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/nifi/nifi-avro-record-utils/1.17.0/nifi-avro-record-utils-1.17.0.jar" sourcepath="M2_REPO/org/apache/nifi/nifi-avro-record-utils/1.17.0/nifi-avro-record-utils-1.17.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/avro/avro/1.11.0/avro-1.11.0.jar" sourcepath="M2_REPO/org/apache/avro/avro/1.11.0/avro-1.11.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-core/2.13.3/jackson-core-2.13.3.jar" sourcepath="M2_REPO/com/fasterxml/jackson/core/jackson-core/2.13.3/jackson-core-2.13.3-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-databind/2.13.3/jackson-databind-2.13.3.jar" sourcepath="M2_REPO/com/fasterxml/jackson/core/jackson-databind/2.13.3/jackson-databind-2.13.3-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-annotations/2.13.3/jackson-annotations-2.13.3.jar" sourcepath="M2_REPO/com/fasterxml/jackson/core/jackson-annotations/2.13.3/jackson-annotations-2.13.3-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar" sourcepath="M2_REPO/org/apache/commons/commons-compress/1.21/commons-compress-1.21-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar" sourcepath="M2_REPO/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar" sourcepath="M2_REPO/commons-io/commons-io/2.11.0/commons-io-2.11.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/github/ben-manes/caffeine/caffeine/2.8.1/caffeine-2.8.1.jar" sourcepath="M2_REPO/com/github/ben-manes/caffeine/caffeine/2.8.1/caffeine-2.8.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/checkerframework/checker-qual/3.1.0/checker-qual-3.1.0.jar" sourcepath="M2_REPO/org/checkerframework/checker-qual/3.1.0/checker-qual-3.1.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/google/errorprone/error_prone_annotations/2.3.4/error_prone_annotations-2.3.4.jar" sourcepath="M2_REPO/com/google/errorprone/error_prone_annotations/2.3.4/error_prone_annotations-2.3.4-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/nifi/nifi-security-utils/1.17.0/nifi-security-utils-1.17.0.jar" sourcepath="M2_REPO/org/apache/nifi/nifi-security-utils/1.17.0/nifi-security-utils-1.17.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/nifi/nifi-security-utils-api/1.17.0/nifi-security-utils-api-1.17.0.jar" sourcepath="M2_REPO/org/apache/nifi/nifi-security-utils-api/1.17.0/nifi-security-utils-api-1.17.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-codec/commons-codec/1.15/commons-codec-1.15.jar" sourcepath="M2_REPO/commons-codec/commons-codec/1.15/commons-codec-1.15-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/bouncycastle/bcprov-jdk15on/1.70/bcprov-jdk15on-1.70.jar" sourcepath="M2_REPO/org/bouncycastle/bcprov-jdk15on/1.70/bcprov-jdk15on-1.70-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/bouncycastle/bcpkix-jdk15on/1.70/bcpkix-jdk15on-1.70.jar" sourcepath="M2_REPO/org/bouncycastle/bcpkix-jdk15on/1.70/bcpkix-jdk15on-1.70-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/bouncycastle/bcutil-jdk15on/1.70/bcutil-jdk15on-1.70.jar" sourcepath="M2_REPO/org/bouncycastle/bcutil-jdk15on/1.70/bcutil-jdk15on-1.70-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/nifi/nifi-properties/1.17.0/nifi-properties-1.17.0.jar" sourcepath="M2_REPO/org/apache/nifi/nifi-properties/1.17.0/nifi-properties-1.17.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/nifi/nifi-property-utils/1.17.0/nifi-property-utils-1.17.0.jar" sourcepath="M2_REPO/org/apache/nifi/nifi-property-utils/1.17.0/nifi-property-utils-1.17.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/at/favre/lib/bcrypt/0.9.0/bcrypt-0.9.0.jar" sourcepath="M2_REPO/at/favre/lib/bcrypt/0.9.0/bcrypt-0.9.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/at/favre/lib/bytes/1.3.0/bytes-1.3.0.jar" sourcepath="M2_REPO/at/favre/lib/bytes/1.3.0/bytes-1.3.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/nifi/nifi-record-sink-service/1.17.0/nifi-record-sink-service-1.17.0.jar" sourcepath="M2_REPO/org/apache/nifi/nifi-record-sink-service/1.17.0/nifi-record-sink-service-1.17.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/nifi/nifi-event-transport/1.17.0/nifi-event-transport-1.17.0.jar" sourcepath="M2_REPO/org/apache/nifi/nifi-event-transport/1.17.0/nifi-event-transport-1.17.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/io/netty/netty-handler/4.1.79.Final/netty-handler-4.1.79.Final.jar" sourcepath="M2_REPO/io/netty/netty-handler/4.1.79.Final/netty-handler-4.1.79.Final-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/io/netty/netty-common/4.1.79.Final/netty-common-4.1.79.Final.jar" sourcepath="M2_REPO/io/netty/netty-common/4.1.79.Final/netty-common-4.1.79.Final-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/io/netty/netty-resolver/4.1.79.Final/netty-resolver-4.1.79.Final.jar" sourcepath="M2_REPO/io/netty/netty-resolver/4.1.79.Final/netty-resolver-4.1.79.Final-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/io/netty/netty-buffer/4.1.79.Final/netty-buffer-4.1.79.Final.jar" sourcepath="M2_REPO/io/netty/netty-buffer/4.1.79.Final/netty-buffer-4.1.79.Final-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/io/netty/netty-transport/4.1.79.Final/netty-transport-4.1.79.Final.jar" sourcepath="M2_REPO/io/netty/netty-transport/4.1.79.Final/netty-transport-4.1.79.Final-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/io/netty/netty-transport-native-unix-common/4.1.79.Final/netty-transport-native-unix-common-4.1.79.Final.jar" sourcepath="M2_REPO/io/netty/netty-transport-native-unix-common/4.1.79.Final/netty-transport-native-unix-common-4.1.79.Final-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/io/netty/netty-codec/4.1.79.Final/netty-codec-4.1.79.Final.jar" sourcepath="M2_REPO/io/netty/netty-codec/4.1.79.Final/netty-codec-4.1.79.Final-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/sun/mail/jakarta.mail/2.0.1/jakarta.mail-2.0.1.jar" sourcepath="M2_REPO/com/sun/mail/jakarta.mail/2.0.1/jakarta.mail-2.0.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/sun/activation/jakarta.activation/2.0.1/jakarta.activation-2.0.1.jar" sourcepath="M2_REPO/com/sun/activation/jakarta.activation/2.0.1/jakarta.activation-2.0.1-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar" sourcepath="M2_REPO/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar" sourcepath="M2_REPO/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar" sourcepath="M2_REPO/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2-sources.jar"/>
@@ -26,7 +72,6 @@
   <classpathentry kind="var" path="M2_REPO/org/objenesis/objenesis/3.2/objenesis-3.2.jar" sourcepath="M2_REPO/org/objenesis/objenesis/3.2/objenesis-3.2-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/mockito/mockito-junit-jupiter/3.11.2/mockito-junit-jupiter-3.11.2.jar" sourcepath="M2_REPO/org/mockito/mockito-junit-jupiter/3.11.2/mockito-junit-jupiter-3.11.2-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36.jar" sourcepath="M2_REPO/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar" sourcepath="M2_REPO/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/codehaus/groovy/groovy-test/3.0.9/groovy-test-3.0.9.jar" sourcepath="M2_REPO/org/codehaus/groovy/groovy-test/3.0.9/groovy-test-3.0.9-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/codehaus/groovy/groovy/3.0.9/groovy-3.0.9.jar" sourcepath="M2_REPO/org/codehaus/groovy/groovy/3.0.9/groovy-3.0.9-sources.jar"/>
 </classpath>
