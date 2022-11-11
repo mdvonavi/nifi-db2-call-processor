@@ -68,24 +68,6 @@
 		    <artifactId>jcc</artifactId>
 		    <version>11.5.7.0</version>
 		</dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.apache.nifi</groupId>-->
-<!--            <artifactId>nifi-dbcp-service</artifactId>-->
-<!--            <version>1.17.0</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.apache.nifi</groupId>-->
-<!--            <artifactId>nifi-api</artifactId>-->
-<!--            <version>1.17.0</version>-->
-<!--            <scope>provided</scope>-->
-<!--        </dependency>-->
-
-<!--        <dependency>-->
-<!--            <groupId>org.apache.nifi</groupId>-->
-<!--            <artifactId>nifi-dbcp-service-api</artifactId>-->
-<!--            <version>${nifi.version}</version>-->
-<!--        </dependency>-->
-
         <dependency>
             <groupId>org.apache.nifi</groupId>
             <artifactId>nifi-dbcp-service</artifactId>

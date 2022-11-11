@@ -1,6 +1,7 @@
 package ibs.processors.db2_processor;
 
 import org.apache.nifi.components.PropertyDescriptor;
+import org.apache.nifi.expression.ExpressionLanguageScope;
 import org.apache.nifi.flowfile.FlowFile;
 import org.apache.nifi.logging.ComponentLog;
 import org.apache.nifi.processor.*;
@@ -31,6 +32,7 @@ public class DB2CallProcessor extends AbstractProcessor {
 			.required(true)
 			.defaultValue("")
 			.addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
+			.expressionLanguageSupported(ExpressionLanguageScope.FLOWFILE_ATTRIBUTES)
 			.build();
 
 	public static final PropertyDescriptor ROWS_NUMBER = new PropertyDescriptor.Builder()
@@ -93,9 +95,22 @@ public class DB2CallProcessor extends AbstractProcessor {
 
 		ComponentLog logger = getLogger();
 
-		FlowFile flowfile = session.create();
+		String sqlstring = "";
+		FlowFile inputflowfile = null;
+		FlowFile flowfile = null;
 
-		flowfile = session.write(flowfile, out -> {
+		if (context.hasIncomingConnection()) {
+			inputflowfile = session.get();
+			sqlstring = context.getProperty(SQL_STRING).evaluateAttributeExpressions(inputflowfile).getValue();
+		}
+		else{
+			inputflowfile = session.create();
+			sqlstring = context.getProperty(SQL_STRING).getValue();
+		}
+
+		String finalSqlstring = sqlstring;
+
+		flowfile = session.write(inputflowfile, out -> {
 			try {
 				dbcpService = context.getProperty(DB2_SERVICE).asControllerService(DBCPService.class);
 				final Connection connection = dbcpService.getConnection();
@@ -103,7 +118,7 @@ public class DB2CallProcessor extends AbstractProcessor {
 				StatementHandler stmt_handler = new StatementHandler(
 						connection,
 						context,
-						context.getProperty(SQL_STRING).getValue(),
+						finalSqlstring,
 						Integer.parseInt(context.getProperty(ROWS_NUMBER).getValue()),
 						logger
 				);
@@ -130,7 +145,7 @@ public class DB2CallProcessor extends AbstractProcessor {
 		switch (status_code){
 			case  (-1):
 				logger.warn("some error, see log for details");
-				session.transfer( flowfile, ERROR_RELATIONSHIP );
+				session.transfer( inputflowfile, ERROR_RELATIONSHIP );
 				break;
 
 			case (1):
